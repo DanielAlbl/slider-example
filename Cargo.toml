@@ -1,0 +1,14 @@
+[package]
+name = "slider-example"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+dioxus = { git = "https://github.com/DioxusLabs/dioxus.git" }
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+dioxus-desktop = { git = "https://github.com/DioxusLabs/dioxus.git" }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+dioxus-web = { git = "https://github.com/DioxusLabs/dioxus.git" }
